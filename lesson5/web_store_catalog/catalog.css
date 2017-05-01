@@ -1,0 +1,97 @@
+@import url("../../whitespaces-reset.css");
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+body {
+  background: #ffd505;
+  font: normal 16px Helvetica, Arial, sans-serif;
+}
+
+header {
+  background: #047ec1;
+  color: #fff;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+main {
+  background: #ececec;
+  padding: 25px;
+}
+
+main h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+main ul li {
+  float: left;
+  width: 23.5%;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: #fff;
+  margin: 0 0 2% 2%;
+}
+
+main ul li:nth-of-type(4n+1) {
+  margin: 0 0 2% 0;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + figure::before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .4);
+  position: fixed;
+}
+
+input[type="checkbox"]:checked + figure img {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -200px;
+}
+
+main h3 {
+  font-size: 1.2em;
+  padding-bottom: 5px;
+}
+
+main ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main figure {
+  height: 160px;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: auto;
+  height: 140px;
+  margin: 0 auto;
+}

@@ -1,0 +1,148 @@
+@import url("../whitespaces-reset.css");
+
+body {
+  font: 300 20px Helvetica, Arial, sans-serif;
+}
+
+main {
+  border: 2px solid black;
+  width: 500px;
+  margin: 5px auto;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+header dt,
+header dd {
+  display: inline-block;
+}
+
+header::after {
+  content: "";
+  display: block;
+  height: 20px;
+  background: black;
+  margin: 5px 0;
+}
+
+dt,
+dd {
+  display: inline-block;
+
+}
+
+#calories dl {
+  display: inline-block;
+}
+
+#calories dl:last-of-type {
+  float: right;
+}
+
+#calories dl:first-of-type dt {
+  font-weight: bold;
+}
+
+hr {
+  margin: 5px 0;
+}
+
+#calories::after {
+  content: "";
+  display: block;
+  height: 10px;
+  background: black;
+  margin: 5px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  text-align: right;
+}
+
+th[scope="rowgroup"] {
+  text-align: left;
+}
+
+#nutrients td:nth-child(2) {
+  text-align: right;
+  font-weight: bold;
+}
+
+#nutrients td:first-of-type {
+  padding-left: 20px;
+}
+
+#nutrients th,
+#nutrients td,
+#vitamins td {
+  border-bottom: 1px solid black;
+}
+
+#nutrients tr:last-of-type th,
+#nutrients tr:last-of-type td {
+  border-bottom: none;
+}
+
+#nutrients {
+  border-bottom: 15px solid black;
+}
+
+#vitamins td:nth-child(2) {
+  text-align: right;
+}
+
+main > table caption {
+  caption-side: bottom;
+  text-align: left;
+  padding: 5px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+main > table caption::before {
+  content: "*";
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+footer table {
+  font-size: 16px;
+}
+
+footer table thead th {
+  border-bottom: 1px solid black;
+  text-align: left;
+}
+
+footer table thead th:first-of-type {
+  text-align: right;
+  padding-right: 30px;
+}
+
+footer table th {
+  font-weight: 300;
+}
+
+footer table td {
+  text-align: left;
+}
+
+footer table tr th,
+footer table tr td:first-child {
+  padding-right: 40px;
+}
+
+
+footer table tr td:first-child {
+  padding-left: 20px;
+}
