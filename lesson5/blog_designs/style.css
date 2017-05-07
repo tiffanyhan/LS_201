@@ -1,0 +1,307 @@
+@import url("../../whitespaces-reset.css");
+
+body {
+  font: normal 20px Helvetica, Arial, sans-serif;
+  color: #45494d;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+body > header {
+  background: #3d3d3d;
+  text-align: center;
+}
+
+body > header h1 {
+  font-size: 68px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 25px;
+  padding: 120px 0;
+  font-weight: normal;
+}
+
+body > header h1 img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 503px;
+  width: 100%;
+}
+
+body > header nav {
+  color: #e1e1e1;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+}
+
+body > header nav ul li {
+  display: inline-block;
+  padding: 0 25px;
+}
+
+body > header nav ul li a {
+  color: inherit;
+}
+
+body > header nav ul li a.active {
+  color: #50c3af;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main .content {
+  width: 65%;
+  margin-right: 11.5%;
+  float: left;
+  box-sizing: border-box;
+}
+
+main article header {
+  margin-bottom: 15px;
+}
+
+main article header p img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+main article header h2 a {
+  color: inherit;
+}
+
+main article header h2 a:hover {
+  color: #50c3af;
+}
+
+main article header p a {
+  color: #50c3af;
+}
+
+main article {
+  margin-bottom: 80px;
+}
+
+main p {
+  line-height: 1.7em;
+}
+
+main section.comments article + article {
+  margin-top: -40px;
+}
+
+.button {
+  color: #f5f5f5;
+  padding: 5px 25px;
+  display: inline-block;
+  border-radius: 15px;
+  border: none;
+  background: #50c3af;
+  cursor: pointer;
+  font: normal 15px Helvetica, Arial, sans-serif;
+}
+
+main .pagination .button + .button {
+  margin-left: 30px;
+}
+
+main .pagination .button::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+main .pagination .prev {
+  background: #d2d5da;
+}
+
+main aside {
+  color: #787b80;
+  font-size: 14px;
+  background: #f6f7f8;
+  padding: 35px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+main aside section h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #40474e;
+  margin-bottom: 30px;
+}
+
+main aside section p {
+  text-align: justify;
+}
+
+main aside section ul li {
+  padding-bottom: 5px;
+}
+
+main aside section ul li::before {
+  content: url("images/icon.png");
+  padding-right: 10px;
+}
+
+main aside section ul li a {
+  color: inherit;
+}
+
+main aside section + section {
+  margin-top: 100px;
+}
+
+main form label {
+  font-weight: bold;
+}
+
+main form dl input[type="text"],
+main form dl input[type="email"],
+main form dl textarea {
+  color: #9a9a9a;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  font: normal 15px Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+}
+
+main form dl input[type="text"],
+main form dl input[type="email"] {
+  width: 450px;
+}
+
+main form input[type="submit"] {
+  margin-top: 10px;
+}
+
+main form dl textarea {
+  resize: none;
+  height: 140px;
+}
+
+footer::before {
+  display: block;
+  content: "";
+  background: #d2d5da;
+  width: 100%;
+  height: 2px;
+}
+
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #7e8287;
+  padding-bottom: 50px;
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 760px) {
+  body > header h1 {
+    font-size: 48px;
+    padding-top: 40px;
+  }
+
+  body > header nav {
+    padding-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .content {
+    width: 100%;
+    float: none;
+    padding: 0 25px 50px 25px;
+  }
+
+  main aside {
+    width: 100%;
+    overflow: visible;
+  }
+
+  main aside section {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+
+  main aside section + section {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body > header h1 img {
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  body > header h1 {
+    padding-bottom: 50px;
+  }
+
+  body > header nav ul li {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 10px 0;
+  }
+
+  body > header nav ul::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+
+  main aside {
+    margin: 0 25px;
+    width: auto;
+    background: transparent;
+    padding: 0;
+  }
+
+  main aside section {
+    display: block;
+    width: auto;
+    background: #f6f7f8;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  main aside section + section {
+    margin-top: 20px;
+  }
+}
