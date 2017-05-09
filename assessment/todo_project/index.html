@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Todos</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <input type="checkbox" name="nav" id="nav">
+    <main>
+      <label for="nav">
+        <div class="hamburger mobile">&#8801;</div>
+      </label>
+      <h1>02/16<span class="count">8</span></h1>
+      <a href="#"><span class="plus">+</span>Add new todo</a>
+      <ul>
+        <li>
+          <input type="checkbox" id="modal">
+          <label for="modal"><span class="name">Item 1</span></label>
+          <img src="images/icon-trash.png" alt="trash can icon">
+          <div class="modal">
+            <form action="" method="post">
+              <fieldset>
+                <dl>
+                  <dt><label for="title">Title</label></dt>
+                  <dd class="content"><input type="text" name="title" id="title"></dd>
+                </dl>
+                <dl>
+                  <dt><label for="day">Due Date</label></dt>
+                  <dd class="content">
+                    <select class="third" name="day" id="day">
+                      <option selected>Day</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                      <option>13</option>
+                      <option>14</option>
+                      <option>15</option>
+                      <option>16</option>
+                      <option>17</option>
+                      <option>18</option>
+                      <option>19</option>
+                      <option>20</option>
+                      <option>21</option>
+                      <option>22</option>
+                      <option>23</option>
+                      <option>24</option>
+                      <option>25</option>
+                      <option>26</option>
+                      <option>27</option>
+                      <option>28</option>
+                      <option>29</option>
+                      <option>30</option>
+                    </select>
+                    <select class="third" name="month" id="month">
+                      <option selected>Month</option>
+                      <option>January</option>
+                      <option>February</option>
+                      <option>March</option>
+                      <option>April</option>
+                      <option>May</option>
+                      <option>June</option>
+                      <option>July</option>
+                      <option>August</option>
+                      <option>September</option>
+                      <option>October</option>
+                      <option>November</option>
+                      <option>December</option>
+                    </select>
+                    <select class="third" name="year" id="year">
+                      <option selected>Year</option>
+                      <option>2000</option>
+                      <option>2001</option>
+                      <option>2002</option>
+                      <option>2003</option>
+                      <option>2004</option>
+                      <option>2005</option>
+                      <option>2006</option>
+                      <option>2007</option>
+                      <option>2008</option>
+                      <option>2009</option>
+                      <option>2010</option>
+                      <option>2011</option>
+                      <option>2012</option>
+                      <option>2013</option>
+                      <option>2014</option>
+                      <option>2015</option>
+                      <option>2016</option>
+                      <option>2017</option>
+                    </select>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><label for="description">Description</label></dt>
+                  <dd class="content"><textarea name="description" id="description"></textarea></dd>
+                </dl>
+                <div class="content center">
+                  <input type="submit" value="Save">
+                  <input type="submit" value="Mark As Complete">
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </li>
+        <li><input type="checkbox"><span class="name">Item 2</span><img src="images/icon-trash.png" alt="trash can icon"></li>
+        <li><input type="checkbox" checked><span class="name">Item 3</span><img src="images/icon-trash.png" alt="trash can icon"></li>
+        <li class="completed"><input type="checkbox" checked><span class="name">Item 4</span><img src="images/icon-trash.png" alt="trash can icon"></li>
+        <li class="completed"><input type="checkbox" checked><span class="name">Item 5</span><img src="images/icon-trash.png" alt="trash can icon"></li>
+        <li><input type="checkbox"><span class="name">Item 6</span><img src="images/icon-trash.png" alt="trash can icon"></li>
+        <li><input type="checkbox"><span class="name">Item 7</span><img src="images/icon-trash.png" alt="trash can icon"></li>
+        <li><input type="checkbox"><span class="name">Item 8</span><img src="images/icon-trash.png" alt="trash can icon"></li>
+        <li><input type="checkbox"><span class="name">Item 9</span><img src="images/icon-trash.png" alt="trash can icon"></li>
+      </ul>
+    </main>
+    <nav class="desktop" id="slide-menu">
+      <section class="all">
+        <h2><img src="images/icon-all.png" alt="all todos icon">All Todos<span class="count">18</span></h2>
+        <ul>
+          <li class="selected">02/16<span class="count">8</span></li>
+          <li>03/16<span class="count">2</span></li>
+          <li>04/16<span class="count">1</span></li>
+          <li>05/16<span class="count">1</span></li>
+          <li>06/16<span class="count">6</span></li>
+        </ul>
+      </section>
+      <section class="completed">
+        <h2><img src="images/icon-completed.png" alt="completed todos icon">Completed</h2>
+        <ul>
+          <li>02/15</li>
+          <li>03/15</li>
+          <li>04/15</li>
+          <li>05/15</li>
+          <li>06/14</li>
+        </ul>
+      </section>
+    </nav>
+  </body>
+</html>

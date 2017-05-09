@@ -1,0 +1,320 @@
+@import url("whitespaces-reset.css");
+
+/* ---------- General Styles ---------- */
+
+.center {
+  text-align: center;
+}
+
+.count {
+  display: inline-block;
+  background: #6b7292;
+  padding: 0 5px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+body {
+  font: 300 16px Helvetica, Arial, sans-serif;
+  color: #060606;
+  overflow-x: hidden;
+}
+
+body::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+main,
+nav {
+  height: 800px;
+}
+
+main {
+  background: #fff;
+  width: 72%;
+  float: right;
+  padding: 60px 100px 0 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ---------- Nav Styles ---------- */
+
+input#nav {
+  display: none;
+}
+
+input#nav:checked ~ #slide-menu {
+  display: block;
+}
+
+input#nav:checked + main {
+  position: absolute;
+  left: 336px;
+}
+
+.hamburger {
+  position: absolute;
+  top: 10px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+nav {
+  background: #464f77;
+  width: 28%;
+  max-width: 335px;
+  float: left;
+  color: #b2b5c3;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+nav section {
+  padding-top: 60px;
+}
+
+nav li {
+  padding: 10px 0;
+  position: relative;
+}
+
+nav li.selected {
+  background: #383f5f;
+  color: #fff;
+}
+
+nav li.selected .count {
+  background: #148fd5;
+}
+
+nav .count {
+  position: absolute;
+  right: 30px;
+}
+
+nav h2 .count {
+  margin-top: 5px;
+  color: #b2b5c3;;
+}
+
+nav h2 img {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.completed li {
+  text-decoration: line-through;
+}
+
+h1 {
+  font-size: 21px;
+  font-weight: inherit;
+  color: #050505;
+  padding: 10px 0;
+}
+
+h2 {
+  position: relative;
+  font-size: 18px;
+  font-weight: inherit;
+  color: #cecfd8;
+  padding: 10px 0;
+}
+
+/* ---------- Main Styles ---------- */
+
+main .count {
+  background: #148fd5;
+  color: #fff;
+  margin-left: 20px;
+}
+
+main li {
+  border-top: 1px solid #e7e7e7;
+  padding: 13px 0;
+}
+
+main li img {
+  float: right;
+}
+
+main li:hover {
+  color: #148fd5;
+  cursor: pointer;
+}
+
+main li input[type="checkbox"] {
+  margin: 0 10px;
+}
+
+main li input[type="checkbox"]:checked + .name,
+main li input[type="checkbox"]:checked + label .name {
+  color: #b3b3b3;
+  text-decoration: line-through;
+}
+
+main .plus {
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+main a {
+  color: #148fd5;
+  text-decoration: none;
+  padding: 13px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* ---------- Modal Styles ---------- */
+
+.modal {
+  display: none;
+  width: 575px;
+  z-index: 1;
+  background: #fff;
+  padding: 40px 40px 40px 30px;
+  box-sizing: border-box;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal form input[type="text"],
+select, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #b3b3b3;
+}
+
+.modal select {
+  -webkit-appearance: none;
+  border-radius: 0;
+  background: #fff;
+}
+
+.modal form dl {
+  margin-bottom: 25px;
+}
+
+.modal form dl::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.modal form dt {
+  float: left;
+  color: #060606;
+}
+
+.modal form .content {
+  float: right;
+  width: 400px;
+}
+
+.modal form select.third {
+  width: 28.33%;
+}
+
+.modal form select.third + .third {
+  margin-left: 25px;
+}
+
+.modal textarea {
+  height: 140px;
+  resize: none;
+}
+
+.modal form input[type="submit"] {
+  width: 185px;
+  height: 40px;
+  color: #fff;
+  background: #148fd5;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.modal form input[type="submit"] + input[type="submit"] {
+  margin-left: 20px;
+}
+
+main li:first-child input[type="checkbox"]:checked + label .name::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+main li input[type="checkbox"]:checked ~ .modal {
+  display: block;
+  position: absolute;
+}
+
+/* ---------- Media Queries ---------- */
+
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    padding-right: 20px;
+  }
+
+  nav {
+    width: 335px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal {
+    width: 90%;
+    top: 20px;
+  }
+
+  .modal form dt {
+    float: none;
+  }
+
+  .modal form .content {
+    float: none;
+    width: 100%;
+  }
+
+  .modal form select.third + .third {
+    margin: 25px 0 0 0;
+  }
+
+  .modal form select.third,
+  .modal form input[type="submit"] {
+    width: 100%;
+  }
+
+  .modal form input[type="submit"] + input[type="submit"] {
+    margin: 10px 0 0 0;
+  }
+}
