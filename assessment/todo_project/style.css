@@ -150,23 +150,15 @@ main li .check {
   vertical-align: middle;
 }
 
+main li input[type="checkbox"] {
+  display: none;
+  margin: 0 10px;
+}
+
 main li input[type="checkbox"]:checked + label .check {
   background: url("images/checked.png") no-repeat;
 }
 
-main li input[type="checkbox"] {
-  display: none;
-}
-
-main li input[type="checkbox"] {
-  margin: 0 10px;
-}
-
-main li input[type="checkbox"]:checked {
-  background: url("images/checked.png");
-}
-
-main li input[type="checkbox"]:checked ~ .name,
 main li input[type="checkbox"]:checked ~ label .name {
   color: #b3b3b3;
   text-decoration: line-through;
