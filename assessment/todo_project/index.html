@@ -17,14 +17,20 @@
       <ul>
         <li>
           <input type="checkbox" id="modal">
-          <label for="modal"><span class="name">Item 1</span></label>
+          <label for="modal">
+            <input type="checkbox" id="checkbox1">
+            <label for="checkbox1">
+              <span class="check"></span>
+            </label>
+            <span class="name">Item 1</span>
+          </label>
           <img src="images/icon-trash.png" alt="trash can icon">
           <div class="modal">
             <form action="/todo" method="post">
               <fieldset>
                 <dl>
                   <dt><label for="title">Title</label></dt>
-                  <dd class="content"><input type="text" name="title" id="title"></dd>
+                  <dd class="content"><input type="text" name="title" id="title" placeholder="Sample Item"></dd>
                 </dl>
                 <dl>
                   <dt><label for="day">Due Date</label></dt>
@@ -61,8 +67,9 @@
                       <option>28</option>
                       <option>29</option>
                       <option>30</option>
-                    </select>
-                    <select class="third" name="month" id="month">
+                    </select><!--
+                 --><span class="separator">/</span><!--
+                 --><select class="third" name="month" id="month">
                       <option selected>Month</option>
                       <option>January</option>
                       <option>February</option>
@@ -76,8 +83,9 @@
                       <option>October</option>
                       <option>November</option>
                       <option>December</option>
-                    </select>
-                    <select class="third" name="year" id="year">
+                    </select><!--
+                 --><span class="separator">/</span><!--
+                 --><select class="third" name="year" id="year">
                       <option selected>Year</option>
                       <option>2000</option>
                       <option>2001</option>
@@ -102,9 +110,9 @@
                 </dl>
                 <dl>
                   <dt><label for="description">Description</label></dt>
-                  <dd class="content"><textarea name="description" id="description"></textarea></dd>
+                  <dd class="content"><textarea name="description" id="description" placeholder="Description"></textarea></dd>
                 </dl>
-                <div class="content center">
+                <div class="content">
                   <input type="submit" value="Save">
                   <input type="submit" value="Mark As Complete">
                 </div>
@@ -112,14 +120,70 @@
             </form>
           </div>
         </li>
-        <li><input type="checkbox"><span class="name">Item 2</span><img src="images/icon-trash.png" alt="trash can icon"></li>
-        <li><input type="checkbox" checked><span class="name">Item 3</span><img src="images/icon-trash.png" alt="trash can icon"></li>
-        <li class="completed"><input type="checkbox" checked><span class="name">Item 4</span><img src="images/icon-trash.png" alt="trash can icon"></li>
-        <li class="completed"><input type="checkbox" checked><span class="name">Item 5</span><img src="images/icon-trash.png" alt="trash can icon"></li>
-        <li><input type="checkbox"><span class="name">Item 6</span><img src="images/icon-trash.png" alt="trash can icon"></li>
-        <li><input type="checkbox"><span class="name">Item 7</span><img src="images/icon-trash.png" alt="trash can icon"></li>
-        <li><input type="checkbox"><span class="name">Item 8</span><img src="images/icon-trash.png" alt="trash can icon"></li>
-        <li><input type="checkbox"><span class="name">Item 9</span><img src="images/icon-trash.png" alt="trash can icon"></li>
+        <li>
+          <input type="checkbox" id="checkbox2">
+          <label for="checkbox2">
+            <span class="check"></span>
+          </label>
+          <span class="name">Item 2</span>
+          <img src="images/icon-trash.png" alt="trash can icon">
+        </li>
+        <li>
+          <input type="checkbox" checked id="checkbox3">
+          <label for="checkbox3">
+            <span class="check"></span>
+          </label>
+          <span class="name">Item 3</span>
+          <img src="images/icon-trash.png" alt="trash can icon">
+        </li>
+        <li class="completed">
+          <input type="checkbox" checked id="checkbox4">
+          <label for="checkbox4">
+            <span class="check"></span>
+          </label>
+          <span class="name">Item 4</span>
+          <img src="images/icon-trash.png" alt="trash can icon">
+        </li>
+        <li class="completed">
+          <input type="checkbox" checked id="checkbox5">
+          <label for="checkbox5">
+            <span class="check"></span>
+          </label>
+          <span class="name">Item 5</span>
+          <img src="images/icon-trash.png" alt="trash can icon">
+        </li>
+        <li>
+          <input type="checkbox" id="checkbox6">
+          <label for="checkbox6">
+            <span class="check"></span>
+          </label>
+          <span class="name">Item 6</span>
+          <img src="images/icon-trash.png" alt="trash can icon">
+        </li>
+        <li>
+          <input type="checkbox" id="checkbox7">
+          <label for="checkbox7">
+            <span class="check"></span>
+          </label>
+          <span class="name">Item 7</span>
+          <img src="images/icon-trash.png" alt="trash can icon">
+        </li>
+        <li>
+          <input type="checkbox" id="checkbox8">
+          <label for="checkbox8">
+            <span class="check"></span>
+          </label>
+          <span class="name">Item 8</span>
+          <img src="images/icon-trash.png" alt="trash can icon">
+        </li>
+        <li>
+          <input type="checkbox" id="checkbox9">
+          <label for="checkbox9">
+            <span class="check"></span>
+          </label>
+          <span class="name">Item 9</span>
+          <img src="images/icon-trash.png" alt="trash can icon">
+        </li>
       </ul>
     </main>
     <nav id="slide-menu" class="desktop">

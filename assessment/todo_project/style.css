@@ -2,10 +2,6 @@
 
 /* ---------- General Styles ---------- */
 
-.center {
-  text-align: center;
-}
-
 .count {
   display: inline-block;
   background: #6b7292;
@@ -60,7 +56,6 @@ input#nav:checked ~ #slide-menu {
 nav {
   background: #464f77;
   width: 28%;
-  max-width: 335px;
   float: left;
   color: #b2b5c3;
   box-sizing: border-box;
@@ -147,12 +142,32 @@ main li:hover {
   cursor: pointer;
 }
 
+main li .check {
+  display: inline-block;
+  background: url("images/checkbox.png") no-repeat;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+main li input[type="checkbox"]:checked + label .check {
+  background: url("images/checked.png") no-repeat;
+}
+
+main li input[type="checkbox"] {
+  display: none;
+}
+
 main li input[type="checkbox"] {
   margin: 0 10px;
 }
 
-main li input[type="checkbox"]:checked + .name,
-main li input[type="checkbox"]:checked + label .name {
+main li input[type="checkbox"]:checked {
+  background: url("images/checked.png");
+}
+
+main li input[type="checkbox"]:checked ~ .name,
+main li input[type="checkbox"]:checked ~ label .name {
   color: #b3b3b3;
   text-decoration: line-through;
 }
@@ -194,8 +209,9 @@ select, textarea {
 
 .modal select {
   -webkit-appearance: none;
-  border-radius: 0;
+  -webkit-border-radius: 0px;
   background: #fff;
+  background: url("images/arrows.png") bottom 50% right 5px no-repeat;
 }
 
 .modal form dl {
@@ -211,19 +227,23 @@ select, textarea {
 .modal form dt {
   float: left;
   color: #060606;
+  padding: 6px 0;
 }
 
 .modal form .content {
   float: right;
   width: 400px;
+  color: #070707;
 }
 
 .modal form select.third {
-  width: 28.33%;
+  width: 29.17%;
 }
 
-.modal form select.third + .third {
-  margin-left: 25px;
+.modal form .separator {
+  display: inline-block;
+  width: 25px;
+  text-align: center;
 }
 
 .modal textarea {
@@ -309,10 +329,15 @@ main li input[type="checkbox"]:checked ~ .modal {
   .modal form .content {
     float: none;
     width: 100%;
+    text-align: center;
   }
 
-  .modal form select.third + .third {
-    margin: 25px 0 0 0;
+  .modal form select.third {
+    margin: 0 0 10px 0;
+  }
+
+  .modal form select.third:last-child {
+    margin: 0;
   }
 
   .modal form select.third,
@@ -322,5 +347,9 @@ main li input[type="checkbox"]:checked ~ .modal {
 
   .modal form input[type="submit"] + input[type="submit"] {
     margin: 10px 0 0 0;
+  }
+
+  .modal form .separator {
+    display: none;
   }
 }
