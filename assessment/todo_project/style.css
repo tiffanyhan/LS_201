@@ -50,11 +50,6 @@ input#nav:checked ~ #slide-menu {
   display: block;
 }
 
-input#nav:checked + main {
-  position: absolute;
-  left: 336px;
-}
-
 .hamburger {
   position: absolute;
   top: 10px;
@@ -70,6 +65,7 @@ nav {
   color: #b2b5c3;
   box-sizing: border-box;
   text-align: center;
+  position: relative;
 }
 
 nav section {
@@ -125,6 +121,11 @@ h2 {
 }
 
 /* ---------- Main Styles ---------- */
+
+input#nav:checked + main {
+  position: absolute;
+  left: 335px;
+}
 
 main .count {
   background: #148fd5;
@@ -287,6 +288,11 @@ main li input[type="checkbox"]:checked ~ .modal {
 
   .desktop {
     display: block;
+  }
+
+  input#nav:checked + main {
+    position: static;
+    left: 335px;
   }
 }
 
